@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Check if a file is provided as an argument
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+# Assign the filename to a variable
+file=$1
+
+# Check if the file exists
+if [ ! -f "$file" ]; then
+    echo "File '$file' not found."
+    exit 1
+fi
+
+# Initialize counters
+lines=0
+words=0
+characters=0
+
+# Read the file line by line using a while loop
+while IFS= read -r line; do
+    # Increment line counter
+    ((lines++))
+    
+    # Split the line into words
+    words_in_line=($line)
+    
+    # Increment word counter by the number of words in the line
+    ((words += ${#words_in_line[@]}))
+    
+    # Iterate over each word and count characters
+    for word in "${words_in_line[@]}"; do
+        ((characters += ${#word}))
+    done
+done < "$file"
+
+# Display the counts
+echo "Lines: $lines"
+echo "Words: $words"
+echo "Characters: $characters"
