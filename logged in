@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Function to share the username
+share_username() {
+    temp_file=$(mktemp)
+    echo "Shared username: $username" > "$temp_file"
+    echo "Username shared in $temp_file"
+}
+
+while true; do
+    # Check if the username is provided as an argument
+    if [ $# -eq 0 ]; then
+        # If no username is provided, check if any user is logged in
+        if [ -z "$(whoami)" ]; then
+            echo "Not logged in"
+            sleep 2  # Wait for 2 seconds before repeating
+            continue
+        else
+            # If a user is logged in, use that username
+            username=$(whoami)
+        fi
+    else
+        # If a username is provided, use it
+        username=$1
+    fi
+
+    # Share the username
+    share_username
+
+    # Wait for 2 seconds before repeating
+    sleep 2
+done
