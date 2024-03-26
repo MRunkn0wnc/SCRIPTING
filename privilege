@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Execute the command
+sudo -l /dev/null
+
+# Check the exit status
+if [ $? -eq 0 ]; then
+    echo "You have root privilege"
+else
+    echo "You do not have root privilege"
+fi
