@@ -1,0 +1,56 @@
+1.
+ifconfig: Configure and display network interfaces.
+2.
+ip: Show/manipulate routing, devices, policy routing, and tunnels.
+3.
+ping: Test the reachability of a host on an IP network.
+4.
+traceroute: Display the route packets take to a network host.
+5.
+netstat: Network statistics(netstat-s), including connections, routing tables(netstat-r), and interface statistics.
+6.
+ss: Utility to investigate sockets.
+7.
+ss-t: display TCP sockets
+8.
+ss-u: display UDP sockets.
+9.
+ss-lt: list all listening TCP connections
+10.
+nslookup: querying the DNS to obtain domain name or any other specific DNS record.
+11.
+dig: DNS lookup utility.(finds info for DNS lookups)
+12.
+host: DNS lookup utility.(command resolves IP addresses into domain names and viceversa).
+13.
+arp: Manipulate the system ARP (Address Resolution Protocol)cache.
+14.
+route: Show/manipulate the IP routing table.
+15.
+iwconfig: Configure wireless network interfaces.
+16.
+nmcli: Command-line client for NetworkManager.
+17.
+nmap: Network exploration tool and security/port scanner.
+18.
+tcpdump: Command-line packet analyzer.
+19.
+wireshark: Network protocol analyzer.
+20.
+curl: Transfer data from or to a server.
+21.
+wget: Non-interactive network downloader.
+22.
+Ttracepath: command is used to trace the path to a network host, similar to traceroute, but it does not require superuser privileges and has fewer options. ftp: File Transfer Protocol client.
+23.
+scp: Secure copy (remote file copy program).
+24.
+ssh: OpenSSH SSH client (remote login program).
+25.
+telnet: User interface to the TELNET protocol.
+26.
+iptables: Administration tool for IPv4 packet filtering and NAT.
+27.
+ufw: Uncomplicated Firewall, a frontend for iptables.
+28.
+fail2ban: Ban IPs that show malicious signs.
